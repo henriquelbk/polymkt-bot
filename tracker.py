@@ -254,34 +254,34 @@ def generate_report(bets: list[dict], stats: dict, path: str) -> None:
 
 def main() -> None:
     if not WALLET_ADDRESS:
-        print("❌  Defina WALLET_ADDRESS no arquivo .env")
-        print("    Exemplo: WALLET_ADDRESS=0xSeuEnderecoAqui")
+        print("ERRO: Defina WALLET_ADDRESS no arquivo .env")
+        print("      Exemplo: WALLET_ADDRESS=0xSeuEnderecoAqui")
         sys.exit(1)
 
-    print(f"📡  Buscando posições para {WALLET_ADDRESS[:10]}…")
+    print(f"[*] Buscando posicoes para {WALLET_ADDRESS[:10]}...")
     raw = fetch_positions(WALLET_ADDRESS)
     if not raw:
-        print("⚠️  Nenhuma posição encontrada. Verifique o endereço.")
+        print("[!] Nenhuma posicao encontrada. Verifique o endereco.")
         return
 
-    print(f"   {len(raw)} posições recebidas da API")
+    print(f"    {len(raw)} posicoes recebidas da API")
     fresh_bets = process_positions(raw)
     existing   = load_existing(DATA_FILE)
     all_bets   = merge_bets(existing, fresh_bets)
 
     save_data(all_bets, DATA_FILE)
-    print(f"💾  Dados salvos em {DATA_FILE}")
+    print(f"[+] Dados salvos em {DATA_FILE}")
 
     stats = compute_stats(all_bets)
     generate_report(all_bets, stats, REPORT_FILE)
-    print(f"📊  Relatório gerado em {REPORT_FILE}")
+    print(f"[+] Relatorio gerado em {REPORT_FILE}")
 
     edge = stats["avg_edge_pct"]
     if edge is not None:
-        symbol = "✅" if edge >= 1 else ("⚠️" if edge > 0 else "❌")
-        print(f"{symbol}  Edge médio vs mercado: {edge:+.2f}%  (meta: +1.00%)")
+        symbol = "[+]" if edge >= 1 else ("[~]" if edge > 0 else "[-]")
+        print(f"{symbol} Edge medio vs mercado: {edge:+.2f}%  (meta: +1.00%)")
     else:
-        print("ℹ️   Sem apostas resolvidas suficientes para calcular edge ainda.")
+        print("[i] Sem apostas resolvidas suficientes para calcular edge ainda.")
 
 
 if __name__ == "__main__":
