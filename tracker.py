@@ -117,6 +117,114 @@ def process_positions(raw_positions: list[dict]) -> list[dict]:
     return [parse_bet(p) for p in raw_positions]
 
 
+def reconstruct_closed_bets(activity: list[dict], open_ids: set[str]) -> list[dict]:
+    """Reconstrói apostas fechadas/vendidas a partir do histórico de atividade.
+
+    A API de posições só retorna posições abertas. Mercados já resolvidos ou
+    posições vendidas só aparecem no endpoint de atividade, então precisamos
+    reconstruí-los manualmente a partir dos eventos TRADE e REDEEM.
+    """
+    from collections import defaultdict
+
+    markets: dict[str, dict] = defaultdict(lambda: {
+        "title": "N/A", "trades": [], "redeems": []
+    })
+
+    for ev in activity:
+        cid = ev.get("conditionId", "")
+        if not cid:
+            continue
+        ev_type = ev.get("type", "")
+        if ev_type == "TRADE":
+            markets[cid]["trades"].append(ev)
+            if not markets[cid]["title"] or markets[cid]["title"] == "N/A":
+                markets[cid]["title"] = ev.get("title", "N/A")
+        elif ev_type == "REDEEM":
+            markets[cid]["redeems"].append(ev)
+            if not markets[cid]["title"] or markets[cid]["title"] == "N/A":
+                markets[cid]["title"] = ev.get("title", "N/A")
+
+    now = datetime.now(timezone.utc).isoformat()
+    closed_bets = []
+
+    for cid, data in markets.items():
+        if cid in open_ids:
+            continue  # já está na lista de posições abertas
+
+        trades = data["trades"]
+        redeems = data["redeems"]
+
+        if not trades:
+            continue
+
+        buy_trades  = [t for t in trades if t.get("side") == "BUY"]
+        sell_trades = [t for t in trades if t.get("side") == "SELL"]
+
+        buy_usdc  = sum(t.get("usdcSize", 0) for t in buy_trades)
+        sell_usdc = sum(t.get("usdcSize", 0) for t in sell_trades)
+        buy_size  = sum(t.get("size", 0) for t in buy_trades)
+        sell_size = sum(t.get("size", 0) for t in sell_trades)
+
+        redeem_usdc = sum(r.get("usdcSize", 0) for r in redeems)
+
+        # Contratos líquidos que chegaram à resolução (comprados - vendidos)
+        net_size = max(buy_size - sell_size, 0.0)
+        # Investimento líquido (desconta o que foi recebido nas vendas parciais)
+        net_invested = max(buy_usdc - sell_usdc, 0.0)
+
+        avg_price = (net_invested / net_size) if net_size > 0.001 else (
+            buy_usdc / buy_size if buy_size > 0 else 0.0
+        )
+
+        is_redeemed   = len(redeems) > 0
+        is_fully_sold = sell_size >= buy_size * 0.99
+        is_closed     = is_redeemed or is_fully_sold
+
+        # PnL e base de cálculo dependem do tipo de fechamento
+        if is_fully_sold and not is_redeemed:
+            # Posição vendida manualmente: custo base é o total comprado
+            report_initial = buy_usdc
+            pnl_dollar     = sell_usdc - buy_usdc
+        else:
+            # Posição resolvida pelo mercado (REDEEM), possivelmente com venda parcial
+            report_initial = net_invested
+            pnl_dollar     = redeem_usdc - net_invested
+
+        pnl_pct = (pnl_dollar / report_initial * 100) if report_initial > 0.001 else 0.0
+
+        # Edge: só calculável quando há resolução pelo mercado (REDEEM)
+        edge_vs_market: float | None = None
+        if is_redeemed and net_size > 0.001:
+            resolved_price_per = redeem_usdc / net_size
+            edge_vs_market = round((resolved_price_per - avg_price) * 100, 2)
+
+        # Outcome do bet (usa o último BUY como referência)
+        last_buy = buy_trades[-1] if buy_trades else {}
+        outcome_index = str(last_buy.get("outcomeIndex", "N/A"))
+        outcome_name  = last_buy.get("outcome") or outcome_index
+
+        current_price = (redeem_usdc / net_size) if (is_redeemed and net_size > 0.001) else avg_price
+
+        closed_bets.append({
+            "market_id":      cid,
+            "title":          data["title"],
+            "outcome":        outcome_index,
+            "size":           round(net_size, 4),
+            "avg_price":      round(avg_price, 4),
+            "current_price":  round(current_price, 4),
+            "initial_value":  round(report_initial, 4),
+            "current_value":  round(redeem_usdc if is_redeemed else sell_usdc, 4),
+            "redeemed_value": round(redeem_usdc, 4),
+            "pnl_dollar":     round(pnl_dollar, 4),
+            "pnl_pct":        round(pnl_pct, 2),
+            "is_closed":      is_closed,
+            "edge_vs_market": edge_vs_market,
+            "fetched_at":     now,
+        })
+
+    return closed_bets
+
+
 # ---------------------------------------------------------------------------
 # Persistence
 # ---------------------------------------------------------------------------
@@ -259,15 +367,24 @@ def main() -> None:
         sys.exit(1)
 
     print(f"[*] Buscando posicoes para {WALLET_ADDRESS[:10]}...")
-    raw = fetch_positions(WALLET_ADDRESS)
-    if not raw:
-        print("[!] Nenhuma posicao encontrada. Verifique o endereco.")
-        return
+    raw_positions = fetch_positions(WALLET_ADDRESS)
 
-    print(f"    {len(raw)} posicoes recebidas da API")
-    fresh_bets = process_positions(raw)
-    existing   = load_existing(DATA_FILE)
-    all_bets   = merge_bets(existing, fresh_bets)
+    print(f"[*] Buscando historico de atividade...")
+    raw_activity = fetch_activity(WALLET_ADDRESS)
+
+    open_ids = {pos.get("conditionId", pos.get("market", "")) for pos in raw_positions}
+    print(f"    {len(raw_positions)} posicoes abertas, {len(raw_activity)} eventos de atividade")
+
+    fresh_bets   = process_positions(raw_positions)
+    closed_bets  = reconstruct_closed_bets(raw_activity, open_ids)
+    print(f"    {len(closed_bets)} apostas fechadas reconstruidas do historico")
+
+    existing = load_existing(DATA_FILE)
+    all_bets = merge_bets(existing, fresh_bets + closed_bets)
+
+    if not all_bets:
+        print("[!] Nenhuma aposta encontrada. Verifique o endereco.")
+        return
 
     save_data(all_bets, DATA_FILE)
     print(f"[+] Dados salvos em {DATA_FILE}")

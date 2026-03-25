@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-03-25T01:51:16.947076+00:00",
-  "total_bets": 5,
+  "last_updated": "2026-03-25T02:23:41.853222+00:00",
+  "total_bets": 14,
   "bets": [
     {
       "market_id": "0x2370f286c018850d6637b93169d6040e5ee6fcc4497288e00c4aa4b1e3669c8b",
@@ -16,7 +16,7 @@
       "pnl_pct": 852.12,
       "is_closed": false,
       "edge_vs_market": null,
-      "fetched_at": "2026-03-25T01:51:16.946574+00:00"
+      "fetched_at": "2026-03-25T02:23:41.853222+00:00"
     },
     {
       "market_id": "0x1b7fd0fe5dbf07c9f7aab729a6688686e5d2df9b443233cd29004bd11818553d",
@@ -32,7 +32,7 @@
       "pnl_pct": 759.26,
       "is_closed": false,
       "edge_vs_market": null,
-      "fetched_at": "2026-03-25T01:51:16.946574+00:00"
+      "fetched_at": "2026-03-25T02:23:41.853222+00:00"
     },
     {
       "market_id": "0xb60c044bba6f7958768691345df1e102448a5b7ef16e4a08879bb10483fb4567",
@@ -48,7 +48,7 @@
       "pnl_pct": 549.41,
       "is_closed": false,
       "edge_vs_market": null,
-      "fetched_at": "2026-03-25T01:51:16.946574+00:00"
+      "fetched_at": "2026-03-25T02:23:41.853222+00:00"
     },
     {
       "market_id": "0x3d756c8bef33e9742edb5a73208f8d51b40bc665a39a934e183ef39b0000931b",
@@ -64,7 +64,7 @@
       "pnl_pct": 791.07,
       "is_closed": false,
       "edge_vs_market": null,
-      "fetched_at": "2026-03-25T01:51:16.946574+00:00"
+      "fetched_at": "2026-03-25T02:23:41.853222+00:00"
     },
     {
       "market_id": "0xdf8e2dc5860027decbe6164555c3c1c9645c3bd33e16b9dc57ca87125047d4a8",
@@ -80,7 +80,151 @@
       "pnl_pct": 431.44,
       "is_closed": false,
       "edge_vs_market": null,
-      "fetched_at": "2026-03-25T01:51:16.946574+00:00"
+      "fetched_at": "2026-03-25T02:23:41.853222+00:00"
+    },
+    {
+      "market_id": "0x02c5217f323f111d1b2a76415903fe393d863a66faa3923312fa7c51692540dd",
+      "title": "Counter-Strike: NRG vs FURIA (BO3) - BLAST Open Rotterdam Group A",
+      "outcome": "1",
+      "size": 5.1948,
+      "avg_price": 0.77,
+      "current_price": 1.0,
+      "initial_value": 4.0,
+      "current_value": 5.1948,
+      "redeemed_value": 5.1948,
+      "pnl_dollar": 1.1948,
+      "pnl_pct": 29.87,
+      "is_closed": true,
+      "edge_vs_market": 23.0,
+      "fetched_at": "2026-03-25T02:23:41.853222+00:00"
+    },
+    {
+      "market_id": "0x2491d56b8baeb8f355867f039b5915826bb1eee50b9b5c97b420e414df753790",
+      "title": "Counter-Strike: TYLOO vs Team Falcons (BO3) - BLAST Open Rotterdam Group A",
+      "outcome": "1",
+      "size": 5.1282,
+      "avg_price": 0.78,
+      "current_price": 1.0,
+      "initial_value": 4.0,
+      "current_value": 5.1282,
+      "redeemed_value": 5.1282,
+      "pnl_dollar": 1.1282,
+      "pnl_pct": 28.21,
+      "is_closed": true,
+      "edge_vs_market": 22.0,
+      "fetched_at": "2026-03-25T02:23:41.853222+00:00"
+    },
+    {
+      "market_id": "0x22c811b733d800f4af032fdf968af52da30e06d268ff3c430aa90a9eda2a038a",
+      "title": "Will FC Bayern München win on 2026-03-18?",
+      "outcome": "0",
+      "size": 2.7778,
+      "avg_price": 0.72,
+      "current_price": 1.0,
+      "initial_value": 2.0,
+      "current_value": 2.7778,
+      "redeemed_value": 2.7778,
+      "pnl_dollar": 0.7778,
+      "pnl_pct": 38.89,
+      "is_closed": true,
+      "edge_vs_market": 28.0,
+      "fetched_at": "2026-03-25T02:23:41.853222+00:00"
+    },
+    {
+      "market_id": "0x75f980e82c6233c7335782d96795af32adf66f06755d9facf39cb1fe4573234d",
+      "title": "Will FC Barcelona win on 2026-03-18?",
+      "outcome": "0",
+      "size": 3.125,
+      "avg_price": 0.64,
+      "current_price": 1.0,
+      "initial_value": 2,
+      "current_value": 3.125,
+      "redeemed_value": 3.125,
+      "pnl_dollar": 1.125,
+      "pnl_pct": 56.25,
+      "is_closed": true,
+      "edge_vs_market": 36.0,
+      "fetched_at": "2026-03-25T02:23:41.853222+00:00"
+    },
+    {
+      "market_id": "0x445bb75546efcbb18b15425b96d8f32c343998d8fae92f8964d8000534cd9947",
+      "title": "Will Liverpool FC win on 2026-03-18?",
+      "outcome": "0",
+      "size": 3.8683,
+      "avg_price": 0.508,
+      "current_price": 1.0,
+      "initial_value": 1.965,
+      "current_value": 3.8683,
+      "redeemed_value": 3.8683,
+      "pnl_dollar": 1.9033,
+      "pnl_pct": 96.86,
+      "is_closed": true,
+      "edge_vs_market": 49.2,
+      "fetched_at": "2026-03-25T02:23:41.853222+00:00"
+    },
+    {
+      "market_id": "0xa7a5c7195383fa50c300c92b0d86ee9692db6596cd47a60cbbee0df101803bf0",
+      "title": "Liverpool FC leading at halftime?",
+      "outcome": "0",
+      "size": 5,
+      "avg_price": 0.6,
+      "current_price": 1.0,
+      "initial_value": 3,
+      "current_value": 5,
+      "redeemed_value": 5,
+      "pnl_dollar": 2,
+      "pnl_pct": 66.67,
+      "is_closed": true,
+      "edge_vs_market": 40.0,
+      "fetched_at": "2026-03-25T02:23:41.853222+00:00"
+    },
+    {
+      "market_id": "0x136f5a0c27a62cf9a2e40a4f48425e43d61b9571a53a2529372c0065f3218a73",
+      "title": "Iran x Israel/US conflict ends by June 30?",
+      "outcome": "1",
+      "size": 0.0054,
+      "avg_price": 0.0,
+      "current_price": 0.0,
+      "initial_value": 2.5,
+      "current_value": 2.7869,
+      "redeemed_value": 0,
+      "pnl_dollar": 0.2869,
+      "pnl_pct": 11.48,
+      "is_closed": true,
+      "edge_vs_market": null,
+      "fetched_at": "2026-03-25T02:23:41.853222+00:00"
+    },
+    {
+      "market_id": "0xe1caea6fd504ca268b57b5c0560c63df551ca8b07c75f382bc6ddbe42bb852a2",
+      "title": "Will SE Palmeiras win on 2026-03-12?",
+      "outcome": "0",
+      "size": 4.7619,
+      "avg_price": 0.42,
+      "current_price": 0.0,
+      "initial_value": 2.0,
+      "current_value": 0,
+      "redeemed_value": 0,
+      "pnl_dollar": -2.0,
+      "pnl_pct": -100.0,
+      "is_closed": true,
+      "edge_vs_market": -42.0,
+      "fetched_at": "2026-03-25T02:23:41.853222+00:00"
+    },
+    {
+      "market_id": "0xf1c3c6afc51fdf1316a46536ac1891229a9b4dbe74af2b0a9fc2516d6c146c40",
+      "title": "Will Andrea Kimi Antonelli finish on the podium at the 2026 F1 Chinese Grand Prix?",
+      "outcome": "1",
+      "size": 4.7619,
+      "avg_price": 0.42,
+      "current_price": 0.0,
+      "initial_value": 2.0,
+      "current_value": 0,
+      "redeemed_value": 0,
+      "pnl_dollar": -2.0,
+      "pnl_pct": -100.0,
+      "is_closed": true,
+      "edge_vs_market": -42.0,
+      "fetched_at": "2026-03-25T02:23:41.853222+00:00"
     }
   ]
 }
