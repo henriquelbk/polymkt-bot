@@ -1,10 +1,7 @@
 name: Update Bet Tracker
 
 on:
-  # Roda automaticamente a cada 6 horas
-  schedule:
-    - cron: "0 */6 * * *"
-  # Também pode ser disparado manualmente no GitHub
+  # Disparado manualmente no GitHub (Actions > Update Bet Tracker > Run workflow)
   workflow_dispatch:
 
 jobs:
@@ -30,9 +27,8 @@ jobs:
 
       - name: Commit and push if changed
         run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name  "henriquelbk"
+          git config user.email "henriquelbk@users.noreply.github.com"
           git add data/bets.json REPORT.md
-          # Só commita se houver mudança real
-          git diff --cached --quiet || git commit -m "chore: auto-update bets [$(date -u '+%Y-%m-%d %H:%M UTC')]"
+          git diff --cached --quiet || git commit -m "chore: update bets [$(date -u '+%Y-%m-%d %H:%M UTC')]"
           git push
