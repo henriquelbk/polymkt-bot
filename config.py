@@ -41,3 +41,13 @@ USER_EDGE_BRACKETS = {
     "45-60": +49.2,
     "<45":   -42.0,  # underdogs: evitar
 }
+
+# --- Copy-trade ---
+# Endereço Polygon do trader a monitorar (@swisstony no Polymarket)
+COPY_TRADER_ADDRESS = "0x204f72f35326db932158cba6adff0b9a1da95e14"
+
+# Janela de atividade recente a considerar (em horas)
+COPY_LOOKBACK_HOURS = 48
+
+# Arquivo de saída do copy scanner
+COPY_FILE = "COPY.md"

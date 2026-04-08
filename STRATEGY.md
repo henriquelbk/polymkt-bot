@@ -106,11 +106,31 @@ Use os slash commands do Claude Code para executar cada etapa:
 | Etapa | Command | O que faz |
 |-------|---------|-----------|
 | 1. Encontrar oportunidades | `/scan` | Busca ~1000 mercados, filtra futebol europeu, entrega top 10 com score e Kelly sizing |
+| 1b. Seguir trader de referência | `/copy` | Verifica posições recentes do @swisstony em football-europe e gera sinais com Kelly sizing (cap 3%) |
 | 2. Registrar antes de apostar | `/log` | Salva sua estimativa de probabilidade, categoria e racional *antes* de executar |
 | 3. Executar no Polymarket | *(manual)* | Coloca a posição no site |
 | 4. Acompanhar e medir edge | `/tracker` | Sincroniza com a API, recalcula edge, win rate e gera REPORT.md |
 
-> **Ordem:** `/scan` → decide → `/log` → aposta no site → `/tracker` quando resolver
+> **Ordem (scan próprio):** `/scan` → decide → `/log` → aposta no site → `/tracker` quando resolver
+>
+> **Ordem (copy-trade):** `/copy` → avalia o sinal → `/log` → aposta no site → `/tracker` quando resolver
+
+### Como usar o /copy
+
+- Roda `python copy_trader.py` e analisa a atividade recente (últimas 48h) do @swisstony
+- Filtra apenas mercados de **futebol europeu** onde ele entrou e **ainda está posicionado**
+- Remove automaticamente mercados que você já tem em carteira
+- Recomenda com **máximo 3% do bankroll** (fase de teste)
+- Salva detalhes em `COPY.md`
+
+**Flags úteis:**
+```bash
+python copy_trader.py --hours 24      # janela mais curta
+python copy_trader.py --hours 720     # backfill de 30 dias (validação)
+python copy_trader.py --verbose       # inspeciona todos os eventos brutos da API
+```
+
+> **Importante:** o `/copy` é um *sinal*, não execução automática. Sempre use `/log` antes de colocar a posição no site para medir seu edge real vs. o do trader.
 
 ---
 
