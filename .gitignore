@@ -3,6 +3,8 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+/.claude
 RESPOSTA_FINAL.md
 STRATEGY.md
 REPORT.md
+SCAN.md
