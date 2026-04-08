@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-04-08T00:01:13.158002+00:00",
-  "total_bets": 15,
+  "last_updated": "2026-04-08T21:11:38.877238+00:00",
+  "total_bets": 22,
   "bets": [
     {
       "market_id": "0x2370f286c018850d6637b93169d6040e5ee6fcc4497288e00c4aa4b1e3669c8b",
@@ -8,15 +8,15 @@
       "outcome": "1",
       "size": 9.3035,
       "avg_price": 0.8598,
-      "current_price": 8.2336,
+      "current_price": 8.001,
       "initial_value": 7.9991,
-      "current_value": 76.6013,
+      "current_value": 74.4373,
       "redeemed_value": 0.0,
-      "pnl_dollar": 68.6021,
-      "pnl_pct": 857.62,
+      "pnl_dollar": 66.4382,
+      "pnl_pct": 830.57,
       "is_closed": false,
       "edge_vs_market": null,
-      "fetched_at": "2026-04-08T00:01:13.147984+00:00"
+      "fetched_at": "2026-04-08T21:11:38.876726+00:00"
     },
     {
       "market_id": "0x1b7fd0fe5dbf07c9f7aab729a6688686e5d2df9b443233cd29004bd11818553d",
@@ -32,7 +32,7 @@
       "pnl_pct": 24.32,
       "is_closed": true,
       "edge_vs_market": null,
-      "fetched_at": "2026-04-08T00:01:13.147984+00:00"
+      "fetched_at": "2026-04-08T21:11:38.876726+00:00"
     },
     {
       "market_id": "0xb60c044bba6f7958768691345df1e102448a5b7ef16e4a08879bb10483fb4567",
@@ -40,15 +40,15 @@
       "outcome": "1",
       "size": 6.25,
       "avg_price": 0.64,
-      "current_price": 4.3431,
+      "current_price": 4.375,
       "initial_value": 4.0,
-      "current_value": 27.1444,
+      "current_value": 27.3438,
       "redeemed_value": 0.0,
-      "pnl_dollar": 23.1444,
-      "pnl_pct": 578.61,
+      "pnl_dollar": 23.3438,
+      "pnl_pct": 583.59,
       "is_closed": false,
       "edge_vs_market": null,
-      "fetched_at": "2026-04-08T00:01:13.147984+00:00"
+      "fetched_at": "2026-04-08T21:11:38.876726+00:00"
     },
     {
       "market_id": "0x3d756c8bef33e9742edb5a73208f8d51b40bc665a39a934e183ef39b0000931b",
@@ -64,7 +64,7 @@
       "pnl_pct": 49.25,
       "is_closed": true,
       "edge_vs_market": 33.0,
-      "fetched_at": "2026-04-08T00:01:13.147984+00:00"
+      "fetched_at": "2026-04-08T21:11:38.876726+00:00"
     },
     {
       "market_id": "0xdf8e2dc5860027decbe6164555c3c1c9645c3bd33e16b9dc57ca87125047d4a8",
@@ -80,7 +80,7 @@
       "pnl_pct": 440.73,
       "is_closed": false,
       "edge_vs_market": null,
-      "fetched_at": "2026-04-08T00:01:13.147984+00:00"
+      "fetched_at": "2026-04-08T21:11:38.876726+00:00"
     },
     {
       "market_id": "0x02c5217f323f111d1b2a76415903fe393d863a66faa3923312fa7c51692540dd",
@@ -96,7 +96,7 @@
       "pnl_pct": 29.87,
       "is_closed": true,
       "edge_vs_market": 23.0,
-      "fetched_at": "2026-04-08T00:01:13.147984+00:00"
+      "fetched_at": "2026-04-08T21:11:38.876726+00:00"
     },
     {
       "market_id": "0x2491d56b8baeb8f355867f039b5915826bb1eee50b9b5c97b420e414df753790",
@@ -112,7 +112,7 @@
       "pnl_pct": 28.21,
       "is_closed": true,
       "edge_vs_market": 22.0,
-      "fetched_at": "2026-04-08T00:01:13.147984+00:00"
+      "fetched_at": "2026-04-08T21:11:38.876726+00:00"
     },
     {
       "market_id": "0x22c811b733d800f4af032fdf968af52da30e06d268ff3c430aa90a9eda2a038a",
@@ -128,7 +128,7 @@
       "pnl_pct": 38.89,
       "is_closed": true,
       "edge_vs_market": 28.0,
-      "fetched_at": "2026-04-08T00:01:13.147984+00:00"
+      "fetched_at": "2026-04-08T21:11:38.876726+00:00"
     },
     {
       "market_id": "0x75f980e82c6233c7335782d96795af32adf66f06755d9facf39cb1fe4573234d",
@@ -144,7 +144,7 @@
       "pnl_pct": 56.25,
       "is_closed": true,
       "edge_vs_market": 36.0,
-      "fetched_at": "2026-04-08T00:01:13.147984+00:00"
+      "fetched_at": "2026-04-08T21:11:38.876726+00:00"
     },
     {
       "market_id": "0x445bb75546efcbb18b15425b96d8f32c343998d8fae92f8964d8000534cd9947",
@@ -160,7 +160,7 @@
       "pnl_pct": 96.86,
       "is_closed": true,
       "edge_vs_market": 49.2,
-      "fetched_at": "2026-04-08T00:01:13.147984+00:00"
+      "fetched_at": "2026-04-08T21:11:38.876726+00:00"
     },
     {
       "market_id": "0xa7a5c7195383fa50c300c92b0d86ee9692db6596cd47a60cbbee0df101803bf0",
@@ -176,7 +176,7 @@
       "pnl_pct": 66.67,
       "is_closed": true,
       "edge_vs_market": 40.0,
-      "fetched_at": "2026-04-08T00:01:13.147984+00:00"
+      "fetched_at": "2026-04-08T21:11:38.876726+00:00"
     },
     {
       "market_id": "0x136f5a0c27a62cf9a2e40a4f48425e43d61b9571a53a2529372c0065f3218a73",
@@ -192,7 +192,7 @@
       "pnl_pct": 11.48,
       "is_closed": true,
       "edge_vs_market": null,
-      "fetched_at": "2026-04-08T00:01:13.147984+00:00"
+      "fetched_at": "2026-04-08T21:11:38.876726+00:00"
     },
     {
       "market_id": "0xe1caea6fd504ca268b57b5c0560c63df551ca8b07c75f382bc6ddbe42bb852a2",
@@ -208,7 +208,7 @@
       "pnl_pct": -100.0,
       "is_closed": true,
       "edge_vs_market": -42.0,
-      "fetched_at": "2026-04-08T00:01:13.147984+00:00"
+      "fetched_at": "2026-04-08T21:11:38.876726+00:00"
     },
     {
       "market_id": "0xf1c3c6afc51fdf1316a46536ac1891229a9b4dbe74af2b0a9fc2516d6c146c40",
@@ -224,23 +224,135 @@
       "pnl_pct": -100.0,
       "is_closed": true,
       "edge_vs_market": -42.0,
-      "fetched_at": "2026-04-08T00:01:13.147984+00:00"
+      "fetched_at": "2026-04-08T21:11:38.876726+00:00"
     },
     {
       "market_id": "0x5f5c8d8fa28d77b5552562f32393ac199fb6b92ed1c1e2239e29c09f7e4eb3f5",
       "title": "Will FC Bayern München win on 2026-04-07?",
       "outcome": "1",
-      "size": 6.5866,
-      "avg_price": 0.6,
-      "current_price": 0.0032,
-      "initial_value": 3.952,
-      "current_value": 0.0211,
+      "size": 6.5867,
+      "avg_price": 0.6073,
+      "current_price": 0.0,
+      "initial_value": 4.0,
+      "current_value": 0,
+      "redeemed_value": 0,
+      "pnl_dollar": -4.0,
+      "pnl_pct": -100.0,
+      "is_closed": true,
+      "edge_vs_market": -60.73,
+      "fetched_at": "2026-04-08T21:11:38.876726+00:00"
+    },
+    {
+      "market_id": "0x4f3421fb2daf5cca7430ed8d8132463963081572d75434393a1808fdb8829fe8",
+      "title": "Will Portugal win the 2026 FIFA World Cup?",
+      "outcome": "0",
+      "size": 56.338,
+      "avg_price": 0.0709,
+      "current_price": 3.9154,
+      "initial_value": 3.9944,
+      "current_value": 220.5858,
       "redeemed_value": 0.0,
-      "pnl_dollar": -3.9309,
-      "pnl_pct": -99.47,
+      "pnl_dollar": 216.5914,
+      "pnl_pct": 5422.43,
       "is_closed": false,
       "edge_vs_market": null,
-      "fetched_at": "2026-04-08T00:01:13.147984+00:00"
+      "fetched_at": "2026-04-08T21:11:38.876726+00:00"
+    },
+    {
+      "market_id": "0x9b6fef249040fd17e9c107955b37ac2c3e923509b6b0ff01cc463a331ddeb894",
+      "title": "Will France win the 2026 FIFA World Cup?",
+      "outcome": "0",
+      "size": 29.4117,
+      "avg_price": 0.1359,
+      "current_price": 4.0735,
+      "initial_value": 3.9971,
+      "current_value": 119.8086,
+      "redeemed_value": 0.0,
+      "pnl_dollar": 115.8115,
+      "pnl_pct": 2897.42,
+      "is_closed": false,
+      "edge_vs_market": null,
+      "fetched_at": "2026-04-08T21:11:38.876726+00:00"
+    },
+    {
+      "market_id": "0x7976b8dbacf9077eb1453a62bcefd6ab2df199acd28aad276ff0d920d6992892",
+      "title": "Will Spain win the 2026 FIFA World Cup?",
+      "outcome": "0",
+      "size": 25.1572,
+      "avg_price": 0.1589,
+      "current_price": 3.9496,
+      "initial_value": 3.9975,
+      "current_value": 99.3609,
+      "redeemed_value": 0.0,
+      "pnl_dollar": 95.3634,
+      "pnl_pct": 2385.59,
+      "is_closed": false,
+      "edge_vs_market": null,
+      "fetched_at": "2026-04-08T21:11:38.876726+00:00"
+    },
+    {
+      "market_id": "0xb5267513c2788d80a813fb5982d6cd56178a2d83d411072eb2df6f6ccf4bbdf1",
+      "title": "Arsenal FC vs. Sporting CP: O/U 2.5",
+      "outcome": "0",
+      "size": 7.0485,
+      "avg_price": 0.5599,
+      "current_price": 3.7709,
+      "initial_value": 3.9465,
+      "current_value": 26.5792,
+      "redeemed_value": 0.0,
+      "pnl_dollar": 22.6327,
+      "pnl_pct": 573.5,
+      "is_closed": false,
+      "edge_vs_market": null,
+      "fetched_at": "2026-04-08T21:11:38.876726+00:00"
+    },
+    {
+      "market_id": "0xadd28bc6b3f9805be04721d49390e99b587de99f5f8bb81f785dc0fb14245265",
+      "title": "FC Barcelona vs. Club Atlético de Madrid: O/U 2.5",
+      "outcome": "0",
+      "size": 6.1825,
+      "avg_price": 0.64,
+      "current_price": 0.003,
+      "initial_value": 3.9568,
+      "current_value": 0.0185,
+      "redeemed_value": 0.0,
+      "pnl_dollar": -3.9383,
+      "pnl_pct": -99.53,
+      "is_closed": false,
+      "edge_vs_market": null,
+      "fetched_at": "2026-04-08T21:11:38.876726+00:00"
+    },
+    {
+      "market_id": "0x896556df2beee1d73545ac5a97d709f462eb2e061500fc090cf5625fbdfb95c7",
+      "title": "Will Arsenal FC win on 2026-04-15?",
+      "outcome": "0",
+      "size": 5.5847,
+      "avg_price": 0.71,
+      "current_price": 3.9372,
+      "initial_value": 3.9651,
+      "current_value": 21.9881,
+      "redeemed_value": 0.0,
+      "pnl_dollar": 18.0229,
+      "pnl_pct": 454.54,
+      "is_closed": false,
+      "edge_vs_market": null,
+      "fetched_at": "2026-04-08T21:11:38.876726+00:00"
+    },
+    {
+      "market_id": "0xc040b58d586ad44c31838fc3d8f7cffb4aaefee71d7f6eede231f77582ecc95c",
+      "title": "FC Barcelona vs. Club Atlético de Madrid: O/U 1.5",
+      "outcome": "0",
+      "size": 4.6316,
+      "avg_price": 0.8599,
+      "current_price": 4.6293,
+      "initial_value": 3.9827,
+      "current_value": 21.4411,
+      "redeemed_value": 0.0,
+      "pnl_dollar": 17.4584,
+      "pnl_pct": 438.35,
+      "is_closed": false,
+      "edge_vs_market": null,
+      "fetched_at": "2026-04-08T21:11:38.876726+00:00"
     }
   ]
 }
