@@ -16,6 +16,7 @@ POLYMARKET_ACTIVITY_API = "https://data-api.polymarket.com/activity"
 POLYMARKET_POSITIONS_API = "https://data-api.polymarket.com/positions"
 POLYMARKET_GAMMA_API    = "https://gamma-api.polymarket.com/markets"
 
-# Arquivo onde os dados ficam salvos
+# Arquivos onde os dados ficam salvos
 DATA_FILE   = "data/bets.json"
+META_FILE   = "data/bets_meta.json"
 REPORT_FILE = "REPORT.md"

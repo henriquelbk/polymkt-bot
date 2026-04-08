@@ -1,38 +1,38 @@
 {
-  "last_updated": "2026-03-25T02:23:41.853222+00:00",
-  "total_bets": 14,
+  "last_updated": "2026-04-08T00:01:13.158002+00:00",
+  "total_bets": 15,
   "bets": [
     {
       "market_id": "0x2370f286c018850d6637b93169d6040e5ee6fcc4497288e00c4aa4b1e3669c8b",
       "title": "Will GTA 6 cost $100+?",
       "outcome": "1",
-      "size": 9.3036,
-      "avg_price": 0.8599,
-      "current_price": 8.1872,
-      "initial_value": 8.0,
-      "current_value": 76.1698,
+      "size": 9.3035,
+      "avg_price": 0.8598,
+      "current_price": 8.2336,
+      "initial_value": 7.9991,
+      "current_value": 76.6013,
       "redeemed_value": 0.0,
-      "pnl_dollar": 68.1698,
-      "pnl_pct": 852.12,
+      "pnl_dollar": 68.6021,
+      "pnl_pct": 857.62,
       "is_closed": false,
       "edge_vs_market": null,
-      "fetched_at": "2026-03-25T02:23:41.853222+00:00"
+      "fetched_at": "2026-04-08T00:01:13.147984+00:00"
     },
     {
       "market_id": "0x1b7fd0fe5dbf07c9f7aab729a6688686e5d2df9b443233cd29004bd11818553d",
       "title": "Will George Russell be the 2026 F1 Drivers' Champion?",
       "outcome": "1",
-      "size": 8.8889,
-      "avg_price": 0.45,
-      "current_price": 3.8667,
+      "size": 0.0089,
+      "avg_price": 0.0,
+      "current_price": 0.0,
       "initial_value": 4.0,
-      "current_value": 34.3704,
-      "redeemed_value": 0.0,
-      "pnl_dollar": 30.3704,
-      "pnl_pct": 759.26,
-      "is_closed": false,
+      "current_value": 4.9728,
+      "redeemed_value": 0,
+      "pnl_dollar": 0.9728,
+      "pnl_pct": 24.32,
+      "is_closed": true,
       "edge_vs_market": null,
-      "fetched_at": "2026-03-25T02:23:41.853222+00:00"
+      "fetched_at": "2026-04-08T00:01:13.147984+00:00"
     },
     {
       "market_id": "0xb60c044bba6f7958768691345df1e102448a5b7ef16e4a08879bb10483fb4567",
@@ -40,15 +40,15 @@
       "outcome": "1",
       "size": 6.25,
       "avg_price": 0.64,
-      "current_price": 4.1562,
+      "current_price": 4.3431,
       "initial_value": 4.0,
-      "current_value": 25.9766,
+      "current_value": 27.1444,
       "redeemed_value": 0.0,
-      "pnl_dollar": 21.9766,
-      "pnl_pct": 549.41,
+      "pnl_dollar": 23.1444,
+      "pnl_pct": 578.61,
       "is_closed": false,
       "edge_vs_market": null,
-      "fetched_at": "2026-03-25T02:23:41.853222+00:00"
+      "fetched_at": "2026-04-08T00:01:13.147984+00:00"
     },
     {
       "market_id": "0x3d756c8bef33e9742edb5a73208f8d51b40bc665a39a934e183ef39b0000931b",
@@ -56,31 +56,31 @@
       "outcome": "0",
       "size": 5.9701,
       "avg_price": 0.67,
-      "current_price": 5.9701,
+      "current_price": 1.0,
       "initial_value": 4.0,
-      "current_value": 35.6427,
-      "redeemed_value": 0.0,
-      "pnl_dollar": 31.6427,
-      "pnl_pct": 791.07,
-      "is_closed": false,
-      "edge_vs_market": null,
-      "fetched_at": "2026-03-25T02:23:41.853222+00:00"
+      "current_value": 5.9701,
+      "redeemed_value": 5.9701,
+      "pnl_dollar": 1.9701,
+      "pnl_pct": 49.25,
+      "is_closed": true,
+      "edge_vs_market": 33.0,
+      "fetched_at": "2026-04-08T00:01:13.147984+00:00"
     },
     {
       "market_id": "0xdf8e2dc5860027decbe6164555c3c1c9645c3bd33e16b9dc57ca87125047d4a8",
       "title": "Will Luiz Inácio Lula da Silva win the 2026 Brazilian presidential election?",
       "outcome": "1",
-      "size": 5.2677,
+      "size": 5.2676,
       "avg_price": 0.5699,
-      "current_price": 3.0289,
-      "initial_value": 3.0023,
-      "current_value": 15.9555,
+      "current_price": 3.0816,
+      "initial_value": 3.002,
+      "current_value": 16.2326,
       "redeemed_value": 0.0,
-      "pnl_dollar": 12.9532,
-      "pnl_pct": 431.44,
+      "pnl_dollar": 13.2306,
+      "pnl_pct": 440.73,
       "is_closed": false,
       "edge_vs_market": null,
-      "fetched_at": "2026-03-25T02:23:41.853222+00:00"
+      "fetched_at": "2026-04-08T00:01:13.147984+00:00"
     },
     {
       "market_id": "0x02c5217f323f111d1b2a76415903fe393d863a66faa3923312fa7c51692540dd",
@@ -96,7 +96,7 @@
       "pnl_pct": 29.87,
       "is_closed": true,
       "edge_vs_market": 23.0,
-      "fetched_at": "2026-03-25T02:23:41.853222+00:00"
+      "fetched_at": "2026-04-08T00:01:13.147984+00:00"
     },
     {
       "market_id": "0x2491d56b8baeb8f355867f039b5915826bb1eee50b9b5c97b420e414df753790",
@@ -112,7 +112,7 @@
       "pnl_pct": 28.21,
       "is_closed": true,
       "edge_vs_market": 22.0,
-      "fetched_at": "2026-03-25T02:23:41.853222+00:00"
+      "fetched_at": "2026-04-08T00:01:13.147984+00:00"
     },
     {
       "market_id": "0x22c811b733d800f4af032fdf968af52da30e06d268ff3c430aa90a9eda2a038a",
@@ -128,7 +128,7 @@
       "pnl_pct": 38.89,
       "is_closed": true,
       "edge_vs_market": 28.0,
-      "fetched_at": "2026-03-25T02:23:41.853222+00:00"
+      "fetched_at": "2026-04-08T00:01:13.147984+00:00"
     },
     {
       "market_id": "0x75f980e82c6233c7335782d96795af32adf66f06755d9facf39cb1fe4573234d",
@@ -144,7 +144,7 @@
       "pnl_pct": 56.25,
       "is_closed": true,
       "edge_vs_market": 36.0,
-      "fetched_at": "2026-03-25T02:23:41.853222+00:00"
+      "fetched_at": "2026-04-08T00:01:13.147984+00:00"
     },
     {
       "market_id": "0x445bb75546efcbb18b15425b96d8f32c343998d8fae92f8964d8000534cd9947",
@@ -160,7 +160,7 @@
       "pnl_pct": 96.86,
       "is_closed": true,
       "edge_vs_market": 49.2,
-      "fetched_at": "2026-03-25T02:23:41.853222+00:00"
+      "fetched_at": "2026-04-08T00:01:13.147984+00:00"
     },
     {
       "market_id": "0xa7a5c7195383fa50c300c92b0d86ee9692db6596cd47a60cbbee0df101803bf0",
@@ -176,7 +176,7 @@
       "pnl_pct": 66.67,
       "is_closed": true,
       "edge_vs_market": 40.0,
-      "fetched_at": "2026-03-25T02:23:41.853222+00:00"
+      "fetched_at": "2026-04-08T00:01:13.147984+00:00"
     },
     {
       "market_id": "0x136f5a0c27a62cf9a2e40a4f48425e43d61b9571a53a2529372c0065f3218a73",
@@ -192,7 +192,7 @@
       "pnl_pct": 11.48,
       "is_closed": true,
       "edge_vs_market": null,
-      "fetched_at": "2026-03-25T02:23:41.853222+00:00"
+      "fetched_at": "2026-04-08T00:01:13.147984+00:00"
     },
     {
       "market_id": "0xe1caea6fd504ca268b57b5c0560c63df551ca8b07c75f382bc6ddbe42bb852a2",
@@ -208,7 +208,7 @@
       "pnl_pct": -100.0,
       "is_closed": true,
       "edge_vs_market": -42.0,
-      "fetched_at": "2026-03-25T02:23:41.853222+00:00"
+      "fetched_at": "2026-04-08T00:01:13.147984+00:00"
     },
     {
       "market_id": "0xf1c3c6afc51fdf1316a46536ac1891229a9b4dbe74af2b0a9fc2516d6c146c40",
@@ -224,7 +224,23 @@
       "pnl_pct": -100.0,
       "is_closed": true,
       "edge_vs_market": -42.0,
-      "fetched_at": "2026-03-25T02:23:41.853222+00:00"
+      "fetched_at": "2026-04-08T00:01:13.147984+00:00"
+    },
+    {
+      "market_id": "0x5f5c8d8fa28d77b5552562f32393ac199fb6b92ed1c1e2239e29c09f7e4eb3f5",
+      "title": "Will FC Bayern München win on 2026-04-07?",
+      "outcome": "1",
+      "size": 6.5866,
+      "avg_price": 0.6,
+      "current_price": 0.0032,
+      "initial_value": 3.952,
+      "current_value": 0.0211,
+      "redeemed_value": 0.0,
+      "pnl_dollar": -3.9309,
+      "pnl_pct": -99.47,
+      "is_closed": false,
+      "edge_vs_market": null,
+      "fetched_at": "2026-04-08T00:01:13.147984+00:00"
     }
   ]
 }
