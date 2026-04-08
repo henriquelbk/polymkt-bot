@@ -99,6 +99,21 @@ Se tudo sim → compra com 5-10% do bankroll, risco máximo = tempo de espera.
 
 ---
 
+## Fluxo diário com os commands
+
+Use os slash commands do Claude Code para executar cada etapa:
+
+| Etapa | Command | O que faz |
+|-------|---------|-----------|
+| 1. Encontrar oportunidades | `/scan` | Busca ~1000 mercados, filtra futebol europeu, entrega top 10 com score e Kelly sizing |
+| 2. Registrar antes de apostar | `/log` | Salva sua estimativa de probabilidade, categoria e racional *antes* de executar |
+| 3. Executar no Polymarket | *(manual)* | Coloca a posição no site |
+| 4. Acompanhar e medir edge | `/tracker` | Sincroniza com a API, recalcula edge, win rate e gera REPORT.md |
+
+> **Ordem:** `/scan` → decide → `/log` → aposta no site → `/tracker` quando resolver
+
+---
+
 ## Sistema de tracking e validação de edge
 
 Use o `tracker.py` deste repositório para medir seu edge automaticamente.
